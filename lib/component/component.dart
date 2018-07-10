@@ -13,8 +13,8 @@ String render(Component comp) => comp.render();
 /// Use [forEach] in templates to
 abstract class Component {
   /// Conditional rendering
-  String when(/* bool | Condition */ cond, String renderer(),
-          [String elseRenderer() = core.nopRender]) =>
+  String when(/* bool | Condition */ cond, /* String | Function */ renderer,
+          [/* String | Function */ elseRenderer = '']) =>
       core.when(cond, renderer, elseRenderer);
 
   /// Render lists based on [Iterable]

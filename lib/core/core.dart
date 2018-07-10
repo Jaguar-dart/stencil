@@ -3,8 +3,8 @@ typedef bool Condition();
 
 /// Renders using [renderer] when [cond] is true. Renders using [elseRenderer]
 /// otherwise.
-String when(/* bool | Condition */ cond, String renderer(),
-    [String elseRenderer() = nopRender]) {
+String when(/* bool | Condition */ cond, /* String | Function */ renderer,
+    [/* String | Function */ elseRenderer = '']) {
   if (cond is Condition) cond = cond();
   if (cond) return renderer();
   return elseRenderer();
@@ -62,6 +62,3 @@ Iterable<int> _rangeUntil(int end, [int step = 1]) sync* {
     yield i;
   }
 }
-
-/// A Simple no-operation renderer
-String nopRender() => '';
