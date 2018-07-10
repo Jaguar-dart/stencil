@@ -6,8 +6,12 @@ typedef bool Condition();
 String when(/* bool | Condition */ cond, /* String | Function */ renderer,
     [/* String | Function */ elseRenderer = '']) {
   if (cond is Condition) cond = cond();
-  if (cond) return renderer();
-  return elseRenderer();
+  if (cond)
+    return (renderer is Function ? renderer() : renderer?.toString()) ?? '';
+  return (elseRenderer is Function
+          ? elseRenderer()
+          : elseRenderer?.toString()) ??
+      '';
 }
 
 /// Render lists based on [Iterable]
