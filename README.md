@@ -7,12 +7,12 @@ Think code-safe, code-completable alternative to mustache.
 
 # Features
 
-- [x] Data binding
-    - [x] Content
-    - [x] Attribute
-- [x] Conditional nodes (if and else)
-- [x] Loops
-- [x] Components
++ Components
++ Data binding
+    + Content
+    + Attribute
++ Conditional nodes (if and else)
++ Loops
 
 # Usage
 
