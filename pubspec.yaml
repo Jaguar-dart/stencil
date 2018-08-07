@@ -1,13 +1,13 @@
 name: stencil
 description: >
   A super simple type-safe, analyzer and code-completion friendly HTML template library for Dart
-version: 2.1.5
+version: 2.1.6
 homepage: https://github.com/jaguar-dart/stencil
 author: Ravi Teja Gudapati <tejainece@gmail.com>
 documentation:
 
 environment:
-  sdk: '>=2.0.0-dev.55.0 <2.0.0'
+  sdk: '>=2.0.0 <3.0.0'
 
 dev_dependencies:
   build_runner:
